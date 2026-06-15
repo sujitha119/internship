@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Card Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f5f5f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card-grid {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            max-width: 1040px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            position: relative;
+            width: 320px;
+            height: 380px;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 24px;
+            color: #ffffff;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Card Specific Backgrounds and Overlays */
+        .card-1 {
+            background-color: #111111;
+            /* Placeholder moon positioning simulation */
+            background-image: radial-gradient(circle at 40% 50%, #ffffff 0%, #ffffff 5%, transparent 35%);
+            background-blend-mode: screen;
+        }
+
+        .card-2 {
+            /* Simulates dark natural floral tone blending */
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('https://unsplash.com');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-3 {
+            /* Jellyfish deep ocean blue mix */
+            background: linear-gradient(135deg, #0052D4, #4364F7, #6FB1FC);
+            background-size: cover;
+        }
+
+        /* Typography Styles */
+        .card-title {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.5px;
+            margin-top: auto;
+            margin-bottom: auto;
+            max-width: 90%;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+        }
+
+        /* Footer Metadata Layout */
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: auto;
+            z-index: 2;
+        }
+
+        /* Branding Logo Element */
+        .brand-icon {
+            width: 28px;
+            height: 28px;
+            background-color: #8A2BE2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            border: 1.5px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* Location and Time metadata bundle */
+        .meta-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            opacity: 0.9;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Functional Inline Icon Graphics */
+        .icon {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+        }
+
+        /* Responsive Layout Breaks */
+        @media (max-width: 1024px) {
+            .card-grid {
+                max-width: 700px;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .card-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                width: 100%;
+                max-width: 340px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card-grid">
+
+    <!-- Card 1: Short title, long jacket -->
+    <a href="#" class="card card-1">
+        <h2 class="card-title">Short title, long jacket</h2>
+        <div class="card-footer">
+            <div class="brand-icon">B</div>
+            <div class="meta-info">
+                <div class="meta-item">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-12-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <span>Earth</span>
+                </div>
+                <div class="meta-item">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
+                    <span>3d</span>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <!-- Card 2: Much longer title -->
+    <a href="#" class="card card-2">
+        <h2 class="card-title">Much longer title that wraps to multiple lines</h2>
+        <div class="card-footer">
+            <div class="brand-icon">B</div>
+            <div class="meta-info">
+                <div class="meta-item">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-12-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <span>Pakistan</span>
+                </div>
+                <div class="meta-item">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
+                    <span>4d</span>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <!-- Card 3: Another longer title -->
+    <a href="#" class="card card-3">
+        <h2 class="card-title">Another longer title belongs here</h2>
+        <div class="card-footer">
+            <div class="brand-icon">B</div>
+            <div class="meta-info">
+                <div class="meta-item">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-12-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <span>California</span>
+                </div>
+                <div class="meta-item">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
+                    <span>5d</span>
+                </div>
+            </div>
+        </div>
+    </a>
+
+</div>
+
+</body>
+</html>

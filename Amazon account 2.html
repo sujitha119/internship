@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background-color: #fff;
+            color: #111;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1040px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 25px;
+            padding-left: 4px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            display: flex;
+            align-items: flex-start;
+            border: 1px solid #d5d9d9;
+            border-radius: 8px;
+            padding: 18px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            text-decoration: none;
+            color: inherit;
+            min-height: 110px;
+        }
+
+        .card:hover {
+            background-color: #f7fafa;
+        }
+
+        .icon-container {
+            margin-right: 16px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .card-title {
+            font-size: 17px;
+            font-weight: 500;
+            color: #111;
+        }
+
+        .card-desc {
+            font-size: 13px;
+            color: #565959;
+            line-height: 1.4;
+        }
+
+        /* Responsive breakdown for smaller monitors and tablets */
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Responsive breakdown for mobile phones */
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            body {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Your Account</h1>
+    
+    <div class="grid">
+        
+        <!-- Your Orders -->
+        <a href="#" class="card">
+            <div class="icon-container">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://w3.org">
+                    <path d="M6 14L24 6L42 14L24 22L6 14Z" fill="#D7C4B7" stroke="#A48B78" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M6 14V34L24 42V22L6 14Z" fill="#CBB3A2" stroke="#A48B78" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M42 14V34L24 42V22L42 14Z" fill="#BFA593" stroke="#A48B78" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M30 11.5L18 17" stroke="#A48B78" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="text-container">
+                <span class="card-title">Your Orders</span>
+                <span class="card-desc">Track, return, or buy things again</span>
+            </div>
+        </a>
+
+        <!-- Login & security -->
+        <a href="#" class="card">
+            <div class="icon-container">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://w3.org">
+                    <circle cx="24" cy="24" r="20" fill="#EAEAEA" stroke="#A0A0A0" stroke-width="2"/>
+                    <rect x="18" y="22" width="12" height="10" rx="1" fill="#A0A0A0"/>
+                    <path d="M21 22V18C21 16.3431 22.3431 15 24 15C25.6569 15 27 16.3431 27 18V22" stroke="#A0A0A0" stroke-width="2"/>
+                    <circle cx="24" cy="26" r="1.5" fill="#EAEAEA"/>
+                </svg>
+            </div>
+            <div class="text-container">
+                <span class="card-title">Login & security</span>
+                <span class="card-desc">Edit login, name, and mobile number</span>
+            </div>
+        </a>
+
+        <!-- Prime -->
+        <a href="#" class="card">
+            <div class="icon-container">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://w3.org">
+                    <path d="M8 16L24 8L40 16L24 24L8 16Z" fill="#00A8E8"/>
+                    <path d="M8 16V32L24 40V24L8 16Z" fill="#0091C8"/>
+                    <path d="M40 16V32L24 40V24L40 16Z" fill="#007CA3"/>
+                </svg>
+            </div>
+            <div class="text-container">
+                <span class="card-title">Prime</span>
+                <span class="card-desc">View benefits and payment settings</span>
+            </div>
+        </a>
+
+        <!-- Your Addresses -->
+        <a href="#" class="card">
+            <div class="icon-container">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://w3.org">
+                    <path d="M24 6C16.27 6 10 12.27 10 20C10 30.5 24 42 24 42C24 42 38 30.5 38 20C38 12.27 31.73 6 24 6ZM24 24.5C21.51 24.5 19.5 22.49 19.5 20C19.5 17.51 21.51 15.5 24 15.5C26.49 15.5 28.5 17.51 28.5 20C28.5 22.49 26.49 24.5 24 24.5Z" fill="#E48924"/>
+                </svg>
+            </div>
+            <div class="text-container">
+                <span class="card-title">Your Addresses</span>
+                <span class="card-desc">Edit addresses for orders and gifts</span>
+            </div>
+        </a>
+
+        <!-- Your business account -->
+        <a href="#" class="card">
+            <div class="icon-container">
+                <div style="background-color: #5544DF; width: 48px; height: 48px; border-radius: 4px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; font-family: sans-serif; font-weight: bold; line-height: 1.1;">
+                    <span style="font-size: 8px; opacity: 0.8; font-weight: normal;">amazon</span>
+                    <span style="font-size: 10px; letter-spacing: -0.5px;">business</span>
+                </div>
+            </div>
+            <div class="text-container">
+                <span class="card-title">Your business account</span>
+                <span class="card-desc">Sign up for free to save up to 18% with GST invoice and bulk discounts and purchase on credit.</span>
+            </div>
+        </a>
+
+        <!-- Payment options -->
+        <a href="#" class="card">
+            <div class="icon-container">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://w3.org">
+                    <rect x="6" y="12" width="36" height="24" rx="3" fill="#1488C4"/>
+                    <rect x="6" y="16" width="36" height="5" fill="#0D5A82"/>
+                    <rect x="10" y="27" width="8" height="4" fill="#FFFFFF" opacity="0.5"/>
+                </svg>
+            </div>
+            <div class="text-container">
+                <span class="card-title">Payment options</span>
+                <span class="card-desc">Edit or add payment methods</span>
+            </div>
+        </a>
+
+        <!-- Amazon Pay balance -->
+        <a href="#" class="card">
+            <div class="icon-container">
+                <div style="background: linear-gradient(135deg, #FF9900, #E47911); width: 48px; height: 32px; border-radius: 4px; position: relative; display: flex; align-items: center; justify-content: center;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+                        <path d="M3 13C6 17 12 19 18 15" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M16 13L19 15L17 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="text-container">
+                <span class="card-title">Amazon Pay balance</span>
+                <span class="card-desc">Add money to your balance</span>
+            </div>
+        </a>
+
+        <!-- Contact Us -->
+        <a href="#" class="card">
+            <div class="icon-container">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://w3.org">
+                    <circle cx="24" cy="24" r="20" fill="#EBF3F5"/>
+                    <path d="M16 25C16 19.5 19.5 15 24 15C28.5 15 32 19.5 32 25" stroke="#00667D" stroke-width="3" stroke-linecap="round"/>
+                    <rect x="13" y="23" width="4" height="7" rx="2" fill="#00667D"/>
+                    <rect x="31" y="23" width="4" height="7" rx="2" fill="#00667D"/>
+                    <path d="M32 28C30 32 26 33 24 33" stroke="#00667D" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="text-container">
+                <span class="card-title">Contact Us</span>
+                <span class="card-desc">Contact our customer service via phone or chat</span>
+            </div>
+        </a>
+
+    </div>
+</div>
+
+</body>
+</html>

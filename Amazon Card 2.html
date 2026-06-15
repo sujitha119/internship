@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore popular Amazon Pay Gift Cards</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fff;
+            color: #111;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1040px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #000;
+        }
+
+        .card-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #e7e7e7;
+            border-radius: 20px;
+            width: 310px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .image-container {
+            height: 200px;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Card 1 Specific Style (Your Photo) */
+        .bg-photo {
+            background: linear-gradient(135deg, #a8a7a5, #7d7c7a);
+        }
+        .photo-placeholder {
+            background: white;
+            width: 75%;
+            height: 85%;
+            margin-top: 15px;
+            border-radius: 4px 4px 0 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .progress-circle {
+            width: 70px;
+            height: 70px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #111;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        .photo-text {
+            font-size: 11px;
+            color: #555;
+            line-height: 1.3;
+        }
+
+        /* Card 2 Specific Style (Animated) */
+        .bg-animated {
+            background-color: #fcebd4;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .cake-graphic {
+            background: #e61474;
+            width: 100%;
+            height: 40%;
+            position: relative;
+        }
+        .play-btn {
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 56px;
+            height: 56px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            border: 2px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 16px solid white;
+            margin-left: 4px;
+        }
+
+        /* Card 3 Specific Style (Physical) */
+        .bg-physical {
+            background: linear-gradient(to right, #fcd5dc, #faebf0);
+        }
+        .giftbox-graphic {
+            width: 140px;
+            height: 90px;
+            background: #cbd94e;
+            border-radius: 4px;
+            margin-top: 40px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .badge-circle {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border: 2px dashed #e61474;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8px;
+            font-weight: bold;
+            color: #e61474;
+            text-align: center;
+        }
+        .mini-card {
+            position: absolute;
+            top: -35px;
+            right: -10px;
+            width: 90px;
+            height: 55px;
+            background: #adc837;
+            border-radius: 6px;
+            transform: rotate(-15deg);
+            box-shadow: -2px 4px 6px rgba(0,0,0,0.15);
+        }
+
+        /* Title Area below images */
+        .card-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #111;
+            padding: 22px 10px;
+            background: #fff;
+        }
+
+        /* Responsive scaling */
+        @media (max-width: 980px) {
+            .card-wrapper {
+                gap: 16px;
+            }
+            .card {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .card {
+                width: 100%;
+                max-width: 340px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Explore popular Amazon Pay Gift Cards</h2>
+    
+    <div class="card-wrapper">
+        
+        <!-- Card 1: Your Photo -->
+        <a href="#" class="card">
+            <div class="image-container bg-photo">
+                <div class="photo-placeholder">
+                    <div class="progress-circle">0%</div>
+                    <div class="photo-text">Almost done<br>It will take just a few seconds</div>
+                </div>
+            </div>
+            <div class="card-title">Your Photo</div>
+        </a>
+
+        <!-- Card 2: Animated -->
+        <a href="#" class="card">
+            <div class="image-container bg-animated">
+                <!-- Decorative representation of the cake element layout -->
+                <div style="width: 0; height: 0; border-bottom: 80px solid #f0535a; border-left: 140px solid transparent; position: absolute; bottom: 40px; right: 40px;"></div>
+                <div class="cake-graphic">
+                    <div class="play-btn">
+                        <div class="play-icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-title">Animated</div>
+        </a>
+
+        <!-- Card 3: Physical -->
+        <a href="#" class="card">
+            <div class="image-container bg-physical">
+                <div class="giftbox-graphic">
+                    <div class="mini-card"></div>
+                    <div class="badge-circle">HAPPY<br>NEW</div>
+                </div>
+            </div>
+            <div class="card-title">Physical</div>
+        </a>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Profile 1</title>
+    <style>
+        /* Base Reset & Background */
+        body {
+            background-color: #0b0f12; /* Dark theme background matching the image */
+            color: white;
+            font-family: sans-serif;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Full Layout Wrapper */
+        .wrapper {
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        /* Top Header Content */
+        .section-header {
+            margin-bottom: 40px;
+        }
+
+        .section-header h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 0 0 15px 0;
+            position: relative;
+        }
+
+        /* Small teal accent line under the main heading */
+        .section-header h1::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 35px;
+            height: 4px;
+            background-color: #1abc9c;
+        }
+
+        .section-subtitle {
+            color: #8a99a6;
+            font-size: 15px;
+            margin-top: 25px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* Container Split Setup */
+        .container {
+            display: flex;
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        /* Left Side: Image Profile */
+        .image-side {
+            flex: 1;
+            min-width: 350px;
+        }
+
+        .image-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+        }
+
+        /* Right Column: Text and Grid Metrics */
+        .content-side {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .profile-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 0 15px 0;
+        }
+
+        .description {
+            color: #8a99a6;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* 2x2 Dashboard Metrics Layout */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .metric-card {
+            background-color: #12181d;
+            border: 1px solid #1c2630;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .metric-card h4 {
+            color: white;
+            margin: 0 0 5px 0;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .metric-card p {
+            color: #8a99a6;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Solid Teal Button */
+        .learn-more-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1abc9c;
+            color: #0b0f12;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 14px;
+            border-radius: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .learn-more-btn span {
+            margin-left: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- Top Section Headings -->
+        <div class="section-header">
+            <h1>About Me</h1>
+            <p class="section-subtitle">A passionate engineer dedicated to solving complex problems through innovative solutions.</p>
+        </div>
+
+        <!-- Main split section -->
+        <div class="container">
+            <!-- Left Column: Image -->
+            <div class="image-side">
+                <img src="D:\picture\surya2.jpeg" alt="Profile Picture">
+            </div>
+
+            <!-- Right Column: Text, Cards Grid, and Button -->
+            <div class="content-side">
+                <h2 class="profile-title">Professional Engineer</h2>
+                
+                <p class="description">
+                    I'm a dedicated engineering student with a passion for innovation and problem-solving. 
+                    My academic journey has equipped me with strong technical skills and a deep 
+                    understanding of engineering principles that I apply to real-world challenges.
+                </p>
+
+                <!-- 2x2 Grid system matching your dashboard style -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h4>Education</h4>
+                        <p>B.S. Mechanical Engineering</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Experience</h4>
+                        <p>3+ Years</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Projects</h4>
+                        <p>10+ Completed</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Awards</h4>
+                        <p>5 Recognitions</p>
+                    </div>
+                </div>
+
+                <!-- Green/Teal Action link -->
+                <a href="#" class="learn-more-btn">
+                    Learn More <span>&rarr;</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Hero</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #212529; /* Dark background container color */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .hero-container {
+            width: 100%;
+            max-width: 720px;
+            text-align: center;
+            padding: 48px 0;
+        }
+
+        .hero-title {
+            font-size: 56px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .hero-desc {
+            font-size: 18px;
+            font-weight: 400;
+            color: #a5a6a7; /* Gray muted text color matching the image */
+            line-height: 1.6;
+            margin-bottom: 32px;
+            max-width: 660px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.15s ease-in-out;
+            cursor: pointer;
+        }
+
+        /* Custom primary cyan-bordered button */
+        .btn-custom {
+            color: #0dcaf0;
+            background-color: transparent;
+            border: 1px solid #0dcaf0;
+        }
+
+        .btn-custom:hover {
+            color: #000000;
+            background-color: #0dcaf0;
+        }
+
+        /* Secondary white-bordered button */
+        .btn-secondary {
+            color: #ffffff;
+            background-color: transparent;
+            border: 1px solid #ffffff;
+        }
+
+        .btn-secondary:hover {
+            color: #000000;
+            background-color: #ffffff;
+        }
+
+        /* Responsive styling for smaller displays */
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 40px;
+            }
+            .hero-desc {
+                font-size: 16px;
+            }
+            .btn-group {
+                flex-direction: column;
+                gap: 12px;
+                padding: 0 32px;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero-container">
+    <h1 class="hero-title">Dark mode hero</h1>
+    <p class="hero-desc">
+        Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
+    </p>
+    <div class="btn-group">
+        <a href="#" class="btn btn-custom">Custom button</a>
+        <a href="#" class="btn btn-secondary">Secondary</a>
+    </div>
+</div>
+
+</body>
+</html>
